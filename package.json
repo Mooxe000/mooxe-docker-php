@@ -1,0 +1,31 @@
+{
+  "name": "mooxe-docker-php",
+  "version": "0.0.0",
+  "description": "docker image for php application of mooxe",
+  "author": "FooTearth <footearth@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mooxe000/mooxe-docker-php.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mooxe000/mooxe-docker-php/issues"
+  },
+  "homepage": "https://github.com/Mooxe000/mooxe-docker-php",
+  "Keywords": [
+    "docker",
+    "daocloud",
+    "image"
+  ],
+  "bin": {},
+  "scripts": {
+    "build": "docker build -t mooxe/php .",
+    "in": "docker run -t -i mooxe/php /bin/bash",
+    "push": "docker push mooxe/php",
+    "test": "echo 'hello'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "shelljs": "^0.4.0"
+  }
+}
