@@ -6,6 +6,8 @@ npm-debug.log
 .tmp
 trash
 
+lumen
+
 /**/bower_components
 /**/node_modules
 /**/dist

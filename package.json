@@ -20,7 +20,9 @@
   "bin": {},
   "scripts": {
     "build": "docker build -t mooxe/php .",
+    "rebuild": "docker build --no-cache=true -t mooxe/php .",
     "in": "docker run -t -i mooxe/php /bin/bash",
+    "mount_in": "docker run -t -i -v $(pwd):/root/mooxe-docker-php mooxe/php /bin/bash",
     "push": "docker push mooxe/php",
     "test": "echo 'hello'"
   },
