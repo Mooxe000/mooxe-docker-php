@@ -1,14 +1,14 @@
 .DS_Store
 .idea
-npm-debug.log
 *_book
+npm-debug.log
 
 .tmp
 trash
 
 lumen
 
-/**/bower_components
 /**/node_modules
 /**/dist
 /**/build
+/**/vendor

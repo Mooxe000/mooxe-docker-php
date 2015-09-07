@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "classmap": [
+      "Command/"
+    ]
+  },
+  "require": {
+    "symfony/Process": "^2.7",
+    "symfony/Filesystem": "^2.7",
+    "symfony/Console": "^2.7"
+  }
+}
