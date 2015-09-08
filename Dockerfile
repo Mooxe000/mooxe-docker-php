@@ -42,4 +42,4 @@ RUN \
   composer config -g repositories.packagist composer \
     http://packagist.phpcomposer.com && \
   composer config -g github-oauth.github.com \
-    2bd537dccb2c721a0744c2766acc084ee89befa3
+    674c2072d3036d5d0b1e72c0e123184fef89719a
