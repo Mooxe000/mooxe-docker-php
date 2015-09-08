@@ -38,4 +38,7 @@ RUN \
   sudo php -- --install-dir=/usr/local/bin --filename=composer && \
 
   # composer mirror
-  composer config -g repositories.packagist composer http://packagist.phpcomposer.com
+  composer config -g repositories.packagist composer \
+    http://packagist.phpcomposer.com && \
+  composer config --global github-oauth.github.com \
+    ee62f829022e6c6986675340d07ff1b2da4a9ae9
