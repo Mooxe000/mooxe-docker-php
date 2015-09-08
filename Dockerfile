@@ -7,16 +7,15 @@ WORKDIR /root
 # php 5.6 ppa
 # RUN add-apt-repository ppa:ondrej/php5-5.6 -y
 
+# update system
 RUN \
-  # update
   apt-get update && \
   apt-get update && \
   apt-get upgrade -y && \
   apt-get autoremove -y
 
+# php install
 RUN \
-
-  # php
   apt-get install \
     php5 \
     php5-dev \
@@ -31,14 +30,16 @@ RUN \
     php5-json \
     php5-ps \
     php5-gd \
-    -y --force-yes && \
+    -y --force-yes
 
-  # composer
+# composer install
+RUN \
   curl -sS https://getcomposer.org/installer | \
-  sudo php -- --install-dir=/usr/local/bin --filename=composer && \
+  sudo php -- --install-dir=/usr/local/bin --filename=composer
 
-  # composer mirror
+# composer config
+RUN \
   composer config -g repositories.packagist composer \
     http://packagist.phpcomposer.com && \
-  composer config --global github-oauth.github.com \
-    ee62f829022e6c6986675340d07ff1b2da4a9ae9
+  composer config -g github-oauth.github.com \
+    2bd537dccb2c721a0744c2766acc084ee89befa3
