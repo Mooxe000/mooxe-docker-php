@@ -14,8 +14,8 @@ RUN \
   apt-get upgrade -y && \
   apt-get autoremove -y
 
-# php install
 RUN \
+  # php install
   apt-get install \
     php5 \
     php5-dev \
@@ -30,16 +30,12 @@ RUN \
     php5-json \
     php5-ps \
     php5-gd \
-    -y --force-yes
+    -y --force-yes && \
 
-# composer install
-RUN \
+  # composer install
   curl -sS https://getcomposer.org/installer | \
-  sudo php -- --install-dir=/usr/local/bin --filename=composer
+  sudo php -- --install-dir=/usr/local/bin --filename=composer && \
 
-# composer config
-RUN \
+  # composer config
   composer config -g repositories.packagist composer \
-    http://packagist.phpcomposer.com && \
-  composer config -g github-oauth.github.com \
-    674c2072d3036d5d0b1e72c0e123184fef89719a
+    http://packagist.phpcomposer.com
